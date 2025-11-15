@@ -1,3 +1,4 @@
+#include <fluid.hpp>
 #include <render.hpp>
 #include <GLFW/glfw3.h>
 
@@ -248,4 +249,20 @@ void Render::render() {
     render_obstacles();
     render_fluid();
     render_ui();
+}
+
+bool Render::is_running() const {
+    return !glfwWindowShouldClose(window);
+}
+
+void Render::swap_buffers() {
+    glfwSwapBuffers(window);
+}
+
+void Render::poll_events() {
+    glfwPollEvents();
+}
+
+float Render::get_current_fps() const {
+    return fps;
 }

@@ -188,8 +188,4 @@ public:
     }
 };
 
-// Explicit instantiation for 4-ary tree (used in fluid simulation)
-template class NaryTree<4>;
-template class NaryTreeNode<4>;
-
 #endif // NARY_TREE_HPP

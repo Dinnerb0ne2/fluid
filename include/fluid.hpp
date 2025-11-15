@@ -155,7 +155,8 @@ private:
 
 public:
     // Ensure initialization order matches declaration order (obstacle_manager before spatial_tree)
-    BLWFluid(int width, int height, float cell_size_val, float viscosity, float gravity_val);
+    // Constructor is declared here; implementation is in src/fluid/fluid.cpp to avoid duplicate definition
+    BLWFluid(int width, int height, float cell_size, float viscosity, float gravity);
     
     // Destructor: Default (vector and tree handle memory automatically)
     ~BLWFluid() = default;
